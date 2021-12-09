@@ -1,0 +1,166 @@
+/* reset do css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: slategray;
+  background-image: url(../img/rosa.jpg);
+  background-size: 100vw 100vh;
+  /*background-size: auto 100vh;*/
+  font-family: 'Baloo 2', cursive;
+  font-size: 12px;
+  height: 100vh;
+}
+
+/* se a tela tiver pelo menos 400px vai carregar estes estilos */
+@media (min-width: 400px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 600px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+header {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+}
+
+.menu {
+  background-color: palevioletred;
+  border-radius: 20px;
+  position: fixed;
+  top: 0;
+  width: 70vw;
+  font-size: 16px;
+}
+  
+.menu ul {
+  display: flex;
+  justify-content: space-around;
+}
+  
+.menu li {
+  list-style: none;
+}
+
+.menu a {
+  display: block;
+  padding: 10px 20px;
+}
+  
+a {
+  color: whitesmoke;
+  text-decoration: none;
+}
+  
+.site-title {
+  color: whitesmoke;
+  font-family: 'Balsamiq Sans', cursive;
+  font-size: 4em;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 5px 5px 5px black;
+}
+
+.site-subtitle {
+  color: rgb(57, 221, 221);
+  font-family: 'Balsamiq Sans', cursive;
+  font-weight: 400;
+  text-align: center;
+  text-shadow: 5px 5px 5px black;
+}
+
+.portfolio {
+  margin: 2em;
+  height:  100vh;
+}
+
+.portfolio h2 {
+  color: whitesmoke;
+  font-family: 'Balsamiq Sans', cursive;
+  font-size: 2em;
+  font-weight: 400;
+  margin-bottom: 1.2em;
+}
+
+.portfolio .grid {
+  display: grid;
+  gap: 2em;
+}
+
+@media (min-width: 560px) {
+  .portfolio .grid {
+    grid-template-columns: repeat(3, 260px);
+  }
+}
+
+@media (min-width: 700px) {
+  .portfolio .grid {
+    align-content: space-around;
+    grid-template-columns: repeat(3, 260px);
+    height: calc(120vh - 2em - 48px - 1.5em);
+    justify-content: space-around;
+    -moz-box-align: center;
+  }
+}
+
+.portfolio figure {
+  text-align: center;
+}
+
+.img-portfolio {
+  border-radius: 10%;
+  height: 180px;
+  object-fit: cover;
+  object-position: center;
+  width: 240px; 
+  -moz-box-align: center;
+}
+
+figcaption {
+  color: whitesmoke;
+}
+
+.contato .icons {
+  text-align: center;
+  -ms-text-combine-horizontal: all;
+}
+
+.contato a {
+  color: whitesmoke;
+  font-size: 1em;
+  transition: text-shadow 1s;
+  -ms-text-combine-horizontal: all;
+}
+.contato h3 {
+    color: white;
+    font-size: 1em;
+    transition: text-shadow 1s;
+    text-align: center;
+    text-orientation: sideways-right;
+    -ms-text-combine-horizontal: all;
+  }
+.contato a:active,
+.contato a:hover  {
+  text-decoration: none;
+  text-shadow: 0px 0px 10px rgba(255,255,255,.5);
+  -ms-text-combine-horizontal: all;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+  }
+}
